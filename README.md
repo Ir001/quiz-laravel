@@ -3,7 +3,10 @@
 ```bash
 git clone https://github.com/Ir001/quiz-laravel.git
 cd quiz-laravel
+cp .env.example .env
+# Edit Cofiguration DB in .env file
 composer install
+php artisan key:generate
 php artisan migrate
 php artisan db:seed ProductSeeder
 
